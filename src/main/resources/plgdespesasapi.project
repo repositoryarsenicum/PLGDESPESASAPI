@@ -56,5 +56,9 @@
     DATA_VENCIMENTO:					15/12/2020
     DATA_PAGAMENTO:						16/12/2020
     OBSERVACAO:							
-        
-https://www.youtube.com/watch?v=k4ZwU4SVlbY&list=PLhLbe7vR10iW9eSwnAdIwxmKdzqcMSgZe&index=1
+
+git init
+git commit -a -m $'PLGECOMMERCEWEB-19122020212325 \n# Versão inicial dos projeto'
+git remote add origin https://github.com/repositoryarsenicum/PLGDESPESASAPI.git
+git push -u origin master
+
