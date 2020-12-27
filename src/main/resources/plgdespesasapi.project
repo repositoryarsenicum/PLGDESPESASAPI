@@ -2,9 +2,22 @@
 
 	+ Spring Boot
 
--- Criar projeto Spring
+		-- Criar projeto Spring
 
-	https://start.spring.io/
+			https://start.spring.io/
+		
+		-- Start application command line
+		
+			./mvnw spring-boot:run
+			
+	+ NodeJS
+	
+		-- Criar projeto Angular CLI
+		
+			npm install -g @angular/cli			
+			ng new PLGDESPESASWEB --skip-tests
+			npm install materialize-css@next			
+			ng serve --port 9090 -o
 
 + Dependencias
 
