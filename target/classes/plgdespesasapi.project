@@ -1,0 +1,79 @@
++ Tecnologia
+
+	+ Spring Boot
+
+		-- Criar projeto Spring
+
+			https://start.spring.io/
+		
+		-- Start application command line
+		
+			./mvnw spring-boot:run
+			
+	+ NodeJS
+	
+		-- Criar projeto Angular CLI
+		
+			npm install -g @angular/cli
+			ng new PLGDESPESASWEB --skip-tests
+			npm install materialize-css@next
+			ng serve --port 9090 -o
+			
+			ng generate component principal
+
++ Dependencias
+
+	-- Dependências Globais NodeJS
+
+		npm install -g fx
+
+	-- Consultar API REST
+
+		curl http://localhost:8080/despesa | fx
+
+	-- Dependências Locais do projeto
+
++ Modelagem de Dados
+
+	+ TB_DESPESA
+
+		CREATE TABLE TB_DESPESA(
+		    CODIGO                              INT          NOT NULL   AUTO_INCREMENT,
+		    ID_PESSOA                           INT          NOT NULL,
+		    ID_TIPO_DESPESA                     INT          NOT NULL,
+		    ID_TIPO_PRODUTO_SERVICO             INT          NOT NULL,
+		    ID_TIPO_FORMA_PAGAMENTO             INT          NOT NULL,
+		    ID_TIPO_SITUACAO_PAGAMENTO          INT          NOT NULL,
+		    ID_TIPO_CANAL_PAGAMENTO             INT          NOT NULL,
+		    ID_FONTE_PAGAMENTO                  INT          NOT NULL,
+		    VALOR_INICIAL                       FLOAT        NOT NULL,
+		    VALOR_DESCONTO                      FLOAT        NOT NULL,
+		    QUANTIDADE                          INT          NOT NULL,
+		    VALOR_FINAL                         FLOAT        NOT NULL,
+		    NUMERO_PARCELA                      INT              NULL,
+		    DATA_VENCIMENTO                     DATE             NULL,
+		    DATA_PAGAMENTO                      DATE             NULL,
+		    OBSERVACAO                          VARCHAR(255)     NULL,
+		    PRIMARY KEY(CODIGO)
+		);
+
+    ID_PESSOA:							BANCO NUBANK
+    ID_TIPO_DESPESA:					DESPESA VARIÁVEL (DESPESA FIXA)
+    ID_TIPO_PRODUTO_SERVICO:			CARTÃO DE CRÉDITO (SERVIÇO DE CARTÃO DE CRÉDITO)
+    ID_TIPO_FORMA_PAGAMENTO:			BOLETO BANCÁRIO
+    ID_TIPO_SITUACAO_PAGAMENTO:			PENDENTE
+    ID_TIPO_CANAL_PAGAMENTO:			INTERNET BANKING
+    ID_FONTE_PAGAMENTO:					SANTANDER (INTERNET BANKING)
+    VALOR_INICIAL:						R$ 2.500,00
+    VALOR_DESCONTO:						R$ 00,00
+    VALOR_FINAL:						R$ 2.500,00
+    NUMERO_PARCELA:						12/12
+    DATA_VENCIMENTO:					15/12/2020
+    DATA_PAGAMENTO:						16/12/2020
+    OBSERVACAO:							
+
+git init
+git commit -a -m $'PLGECOMMERCEWEB-19122020212325 \n# Versão inicial dos projeto'
+git remote add origin https://github.com/repositoryarsenicum/PLGDESPESASAPI.git
+git push -u origin master
+
