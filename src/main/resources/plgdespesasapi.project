@@ -14,9 +14,9 @@
 	
 		-- Criar projeto Angular CLI
 		
-			npm install -g @angular/cli			
+			npm install -g @angular/cli
 			ng new PLGDESPESASWEB --skip-tests
-			npm install materialize-css@next			
+			npm install materialize-css@next
 			ng serve --port 9090 -o
 
 + Dependencias
@@ -36,7 +36,7 @@
 	+ TB_DESPESA
 
 		CREATE TABLE TB_DESPESA(
-		    CODIGO                              INT          NOT NULL   AUTO_INCREMENT,
+		    CODIGO                              INT          NOT NULL   		AUTO_INCREMENT,
 		    ID_PESSOA                           INT          NOT NULL,
 		    ID_TIPO_DESPESA                     INT          NOT NULL,
 		    ID_TIPO_PRODUTO_SERVICO             INT          NOT NULL,
@@ -74,4 +74,30 @@ git init
 git commit -a -m $'PLGECOMMERCEWEB-19122020212325 \n# Versão inicial dos projeto'
 git remote add origin https://github.com/repositoryarsenicum/PLGDESPESASAPI.git
 git push -u origin master
+
+
++ Comandos
+
+    -- Configurar JAVA_HOME (linux)
+    
+        -- Acessar a pasta "/etc/environment" e inserir no final 
+            JAVA_HOME="/usr/lib/jvm/java-1.8.0-openjdk-amd64"
+            
+        -- Acessar a pasta ".bashrc" e inserir no final
+            # JAVA
+            export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64/bin/
+            export PATH=$JAVA_HOME/bin:$PATH"
+            
+        -- Rodar os comandos
+            source ~/.bashrc
+            source /etc/environment
+            
+        -- Verificar
+            javac -version
+            mvn -version
+
+    -- Executar application por command line
+        mvn -N io.takari:maven:wrapper
+        ./mvnw spring-boot:run
+
 
